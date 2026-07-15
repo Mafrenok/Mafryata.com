@@ -1,0 +1,524 @@
+/*=========================================
+        MAFRYATA
+        by Mordirka
+=========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#0b0b17;
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+/*==========================
+        ФОН
+==========================*/
+
+.background{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    left:0;
+
+    top:0;
+
+    z-index:-100;
+
+    background:
+
+    radial-gradient(circle at top left,#7b2cff33,transparent 40%),
+
+    radial-gradient(circle at bottom right,#4d7cff33,transparent 40%),
+
+    linear-gradient(135deg,#090912,#111124,#1b1738,#281d50);
+
+}
+
+/*==========================
+        МЕНЮ
+==========================*/
+
+nav{
+
+    width:100%;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 70px;
+
+    backdrop-filter:blur(15px);
+
+    background:rgba(15,15,25,.45);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    z-index:999;
+
+}
+
+.logo{
+
+    font-size:38px;
+
+    font-weight:800;
+
+    color:#b95cff;
+
+    letter-spacing:2px;
+
+    text-shadow:0 0 20px #8b3dff;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:35px;
+
+    list-style:none;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#b95cff;
+
+}
+
+/*==========================
+        HEADER
+==========================*/
+
+header{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:120px 20px;
+
+}
+
+.hero h1{
+
+    font-size:95px;
+
+    color:#c56cff;
+
+    text-shadow:
+        0 0 15px #8b3dff,
+        0 0 35px #8b3dff,
+        0 0 70px #8b3dff,
+        0 0 120px #8b3dff;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    color:#dcdcdc;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+.buttons{
+    margin-top:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+}
+
+.telegramBtn,
+.discordBtn{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:17px 42px;
+
+    border-radius:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.telegramBtn{
+
+    background:#8b3dff;
+
+    box-shadow:0 0 25px rgba(139,61,255,.55);
+
+}
+
+.telegramBtn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 40px #8b3dff;
+
+}
+
+.discordBtn{
+
+    background:#5865F2;
+
+    box-shadow:0 0 25px rgba(88,101,242,.55);
+
+}
+
+.discordBtn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 40px #5865F2;
+
+}
+
+/*==========================
+        КАРТОЧКИ
+==========================*/
+
+.socials{
+
+    width:90%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+    margin-bottom:100px;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 35px rgba(155,70,255,.35);
+
+}
+
+.card h2{
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+    color:#c680ff;
+
+}
+/*==========================
+      ИЗОБРАЖЕНИЯ
+==========================*/
+
+.preview{
+
+    width:100%;
+
+    border-radius:15px;
+
+    margin-top:15px;
+
+    margin-bottom:15px;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+    border:2px solid rgba(255,255,255,.08);
+
+}
+
+.preview:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:
+    0 0 30px rgba(155,70,255,.55);
+
+}
+
+/*==========================
+      ТЕКСТ
+==========================*/
+
+.card p{
+
+    margin-top:10px;
+
+    color:#d8d8d8;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+/*==========================
+      КНОПКИ В КАРТОЧКАХ
+==========================*/
+
+.telegramButton,
+.discordButton{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:15px 40px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.telegramButton{
+
+    background:#8b3dff;
+
+    box-shadow:0 0 25px rgba(139,61,255,.45);
+
+}
+
+.telegramButton:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 40px #8b3dff;
+
+}
+
+.discordButton{
+
+    background:#5865F2;
+
+    box-shadow:0 0 25px rgba(88,101,242,.45);
+
+}
+
+.discordButton:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 40px #5865F2;
+
+}
+
+/*==========================
+        FOOTER
+==========================*/
+
+footer{
+
+    text-align:center;
+
+    padding:40px;
+
+    background:rgba(255,255,255,.04);
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+footer p{
+
+    color:#aaa;
+
+    font-size:16px;
+
+}
+
+/*==========================
+      СКРОЛЛБАР
+==========================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0f0f1c;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#8b3dff;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#b56dff;
+
+}
+
+/*==========================
+      АДАПТАЦИЯ
+==========================*/
+
+@media(max-width:900px){
+
+nav{
+
+    padding:20px;
+
+}
+
+nav ul{
+
+    display:none;
+
+}
+
+.hero h1{
+
+    font-size:55px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+.buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.socials{
+
+    grid-template-columns:1fr;
+
+}
+
+.card{
+
+    padding:20px;
+
+}
+
+}
+/*==========================
+      АНИМАЦИЯ КАРТОЧЕК
+==========================*/
+
+.card{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+}
+
+.card.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:.8s;
+
+}
+
+.logo{
+
+    transition:.3s;
+
+}
