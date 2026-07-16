@@ -64,7 +64,325 @@ Discord
 
 </header>
 
-<main>
+<section class="gtaGame">
+
+<h1>🚗 Мини-игра GTA V</h1>
+
+<div class="quiz">
+
+<div class="progress">
+
+Вопрос
+
+<span id="questionNumber">
+
+1
+
+</span>
+
+из
+
+5
+
+</div>
+
+<img
+
+id="gtaImage"
+
+class="quizImage"
+
+src="images/gta1.jpg"
+
+>
+
+<h2 id="questionTitle">
+
+Как называется эта машина?
+
+</h2>
+
+<div class="answers">
+
+<button class="answer" onclick="answer(0)">
+
+Ответ 1
+
+</button>
+
+<button class="answer" onclick="answer(1)">
+
+Ответ 2
+
+</button>
+
+<button class="answer" onclick="answer(2)">
+
+Ответ 3
+
+</button>
+
+</div>
+
+<div id="result"></div>
+
+<button
+
+id="nextButton"
+
+onclick="nextQuestion()"
+
+style="display:none;">
+
+Следующий вопрос
+
+</button>
+
+</div>
+
+<div
+
+id="finish"
+
+style="display:none;">
+
+<h1>
+
+🏆 Игра окончена
+
+</h1>
+
+<h2>
+
+Правильных ответов:
+
+<span id="score">
+
+0
+
+</span>
+
+/5
+
+</h2>
+
+<button onclick="restartGame()">
+
+Играть снова
+
+</button>
+
+</div>
+
+</section><section class="minecraftGame">
+
+<h1>⛏️ Мини-игра Minecraft</h1>
+
+<div class="quizMC">
+
+<div class="progress">
+
+Вопрос
+
+<span id="mcQuestionNumber">
+
+1
+
+</span>
+
+из
+
+5
+
+</div>
+
+<img
+
+id="mcImage"
+
+class="quizImage"
+
+src="images/mc1.jpg"
+
+>
+
+<h2 id="mcQuestionTitle">
+
+Кто изображён на картинке?
+
+</h2>
+
+<div class="answers">
+
+<button class="mcAnswer" onclick="mcAnswer(0)">
+
+Ответ 1
+
+</button>
+
+<button class="mcAnswer" onclick="mcAnswer(1)">
+
+Ответ 2
+
+</button>
+
+<button class="mcAnswer" onclick="mcAnswer(2)">
+
+Ответ 3
+
+</button>
+
+</div>
+
+<div id="mcResult"></div>
+
+<button
+
+id="mcNextButton"
+
+onclick="mcNextQuestion()"
+
+style="display:none;">
+
+Следующий вопрос
+
+</button>
+
+</div>
+
+<div
+
+id="mcFinish"
+
+style="display:none;">
+
+<h1>
+
+🏆 Minecraft пройден!
+
+</h1>
+
+<h2>
+
+Правильных ответов:
+
+<span id="mcScore">
+
+0
+
+</span>
+
+/5
+
+</h2>
+
+<button onclick="mcRestartGame()">
+
+Играть снова
+
+</button>
+
+</div>
+
+</section><section class="cs2Game">
+
+<h1>🔫 Мини-игра CS2</h1>
+
+<div class="quizCS">
+
+<div class="progress">
+
+Вопрос
+
+<span id="csQuestionNumber">
+
+1
+
+</span>
+
+из
+
+5
+
+</div>
+
+<img
+
+id="csImage"
+
+class="quizImage"
+
+src="images/cs1.jpg"
+
+>
+
+<h2 id="csQuestionTitle">
+
+Что изображено на картинке?
+
+</h2>
+
+<div class="answers">
+
+<button class="csAnswer" onclick="csAnswer(0)">
+
+Ответ 1
+
+</button>
+
+<button class="csAnswer" onclick="csAnswer(1)">
+
+Ответ 2
+
+</button>
+
+<button class="csAnswer" onclick="csAnswer(2)">
+
+Ответ 3
+
+</button>
+
+</div>
+
+<div id="csResult"></div>
+
+<button
+
+id="csNextButton"
+
+onclick="csNextQuestion()"
+
+style="display:none;">
+
+Следующий вопрос
+
+</button>
+
+</div>
+
+<div id="csFinish" style="display:none;">
+
+<h1>🏆 CS2 пройдена!</h1>
+
+<h2>
+
+Правильных ответов:
+
+<span id="csScore">0</span>
+
+/5
+
+</h2>
+
+<button onclick="csRestartGame()">
+
+Играть снова
+
+</button>
+
+</div>
+
+</section><main>
 
 <section class="socials">
 

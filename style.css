@@ -522,3 +522,184 @@ nav ul{
     transition:.3s;
 
 }
+/* ========================= */
+/*        МИНИ-ИГРЫ          */
+/* ========================= */
+
+.gtaGame,
+.minecraftGame,
+.cs2Game{
+
+    width:90%;
+    max-width:900px;
+    margin:80px auto;
+    padding:40px;
+
+    background:rgba(20,20,35,.85);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:25px;
+
+    box-shadow:0 0 40px rgba(140,70,255,.35);
+
+    backdrop-filter:blur(15px);
+
+}
+
+.gtaGame h1,
+.minecraftGame h1,
+.cs2Game h1{
+
+    text-align:center;
+    font-size:42px;
+    color:#b85cff;
+    margin-bottom:35px;
+
+}
+
+.progress{
+
+    text-align:center;
+    font-size:22px;
+    margin-bottom:25px;
+
+}
+
+.quizImage{
+
+    width:100%;
+    max-width:700px;
+
+    display:block;
+
+    margin:0 auto 30px;
+
+    border-radius:20px;
+
+    border:3px solid #8b3dff;
+
+}
+
+.answers{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-top:30px;
+
+}
+
+.answers button{
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#8b3dff;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.answers button:hover{
+
+    background:#a85dff;
+
+    transform:scale(1.03);
+
+}
+
+#nextButton,
+#mcNextButton,
+#csNextButton{
+
+    display:block;
+
+    margin:30px auto 0;
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#00c853;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#nextButton:hover,
+#mcNextButton:hover,
+#csNextButton:hover{
+
+    transform:scale(1.05);
+
+}
+
+#finish,
+#mcFinish,
+#csFinish{
+
+    text-align:center;
+
+    margin-top:40px;
+
+}
+
+#finish h1,
+#mcFinish h1,
+#csFinish h1{
+
+    color:#00ff88;
+
+    margin-bottom:20px;
+
+}
+
+#finish button,
+#mcFinish button,
+#csFinish button{
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#8b3dff;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#finish button:hover,
+#mcFinish button:hover,
+#csFinish button:hover{
+
+    transform:scale(1.05);
+
+}
