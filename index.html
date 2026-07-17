@@ -1,454 +1,80 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAFRYATA</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAFRYATA</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=CBRorkAJLxFFL7J1Tf15Ql2Mx8lSYx93Pn9D1SGKF6uNWvDkQr-g85UzoZC1-rI3Js2kb1QTcHI6lR6kdrDJt-TyxYs9rrAc-wYmHXOn2gS-1T_t78KU8LCJ6hHcPVfKy3N95Z-tFSHXxfpLLRoItWhCtj2LGVNVZQzGBG6crzPRxUztTJ3o0Sb93V1vmyqUxnywBzMQadXcoWU6homO1xF7GiazaE0f5yMpMBkksR5r-KkFessWnSeoEJhG4LrOx00wY1xAX1vkLkw3OTDvJ4jGpEDagfoYUGiK_gbleW0bclsGPvrJUdcx1artMX6o" charset="UTF-8"></script></head>
 <body>
 
 <div class="background"></div>
 
 <header>
+  <div class="logo">MAFRYATA</div>
 
-<nav>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-<div class="logo">
-MAFRYATA
-</div>
-
-<ul>
-
-<li><a href="#home">Главная</a></li>
-<li><a href="#telegram">Telegram</a></li>
-<li><a href="#discord">Discord</a></li>
-
-</ul>
-
-</nav>
-
-<div class="hero" id="home">
-
-<h1>MAFRYATA</h1>
-
-<p>
-
-Лучшее игровое сообщество.
-
-Telegram канал и Discord сервер.
-
-</p>
-
-<div class="buttons">
-
-<a href="#telegram" class="telegramBtn">
-
-Telegram
-
-</a>
-
-<a href="#discord" class="discordBtn">
-
-Discord
-
-</a>
-
-</div>
-
-</div>
-
+  <nav id="navMenu">
+    <a href="#">Главная</a>
+    <a href="#telegram">Telegram</a>
+    <a href="#discord">Discord</a>
+    <a href="#news">Новости</a>
+    <a href="games.html">Игры</a>
+  </nav>
 </header>
 
-<section class="gtaGame">
+<section class="hero" id="home">
+<h1>MAFRYATA</h1>
+<p>Лучшее игровое сообщество.<br>Telegram канал и Discord сервер.</p>
 
-<h1>🚗 Мини-игра GTA V</h1>
+<div class="main-buttons">
+  <div class="top-buttons">
+    <a href="#telegram" class="btn telegram">🔵 Telegram</a>
+    <a href="#news" class="btn news">📰 Новости</a>
+    <a href="#discord" class="btn discord">🟣 Discord</a>
+  </div>
 
-<div class="quiz">
-
-<div class="progress">
-
-Вопрос
-
-<span id="questionNumber">
-
-1
-
-</span>
-
-из
-
-5
-
+  <a href="games.html" class="btn games">🎮 Мини-игры</a>
 </div>
+</section>
 
-<img
+<main>
 
-id="gtaImage"
-
-class="quizImage"
-
-src="images/gta1.jpg"
-
->
-
-<h2 id="questionTitle">
-
-Как называется эта машина?
-
-</h2>
-
-<div class="answers">
-
-<button class="answer" onclick="answer(0)">
-
-Ответ 1
-
-</button>
-
-<button class="answer" onclick="answer(1)">
-
-Ответ 2
-
-</button>
-
-<button class="answer" onclick="answer(2)">
-
-Ответ 3
-
-</button>
-
-</div>
-
-<div id="result"></div>
-
-<button
-
-id="nextButton"
-
-onclick="nextQuestion()"
-
-style="display:none;">
-
-Следующий вопрос
-
-</button>
-
-</div>
-
-<div
-
-id="finish"
-
-style="display:none;">
-
-<h1>
-
-🏆 Игра окончена
-
-</h1>
-
-<h2>
-
-Правильных ответов:
-
-<span id="score">
-
-0
-
-</span>
-
-/5
-
-</h2>
-
-<button onclick="restartGame()">
-
-Играть снова
-
-</button>
-
-</div>
-
-</section><section class="minecraftGame">
-
-<h1>⛏️ Мини-игра Minecraft</h1>
-
-<div class="quizMC">
-
-<div class="progress">
-
-Вопрос
-
-<span id="mcQuestionNumber">
-
-1
-
-</span>
-
-из
-
-5
-
-</div>
-
-<img
-
-id="mcImage"
-
-class="quizImage"
-
-src="images/mc1.jpg"
-
->
-
-<h2 id="mcQuestionTitle">
-
-Кто изображён на картинке?
-
-</h2>
-
-<div class="answers">
-
-<button class="mcAnswer" onclick="mcAnswer(0)">
-
-Ответ 1
-
-</button>
-
-<button class="mcAnswer" onclick="mcAnswer(1)">
-
-Ответ 2
-
-</button>
-
-<button class="mcAnswer" onclick="mcAnswer(2)">
-
-Ответ 3
-
-</button>
-
-</div>
-
-<div id="mcResult"></div>
-
-<button
-
-id="mcNextButton"
-
-onclick="mcNextQuestion()"
-
-style="display:none;">
-
-Следующий вопрос
-
-</button>
-
-</div>
-
-<div
-
-id="mcFinish"
-
-style="display:none;">
-
-<h1>
-
-🏆 Minecraft пройден!
-
-</h1>
-
-<h2>
-
-Правильных ответов:
-
-<span id="mcScore">
-
-0
-
-</span>
-
-/5
-
-</h2>
-
-<button onclick="mcRestartGame()">
-
-Играть снова
-
-</button>
-
-</div>
-
-</section><section class="cs2Game">
-
-<h1>🔫 Мини-игра CS2</h1>
-
-<div class="quizCS">
-
-<div class="progress">
-
-Вопрос
-
-<span id="csQuestionNumber">
-
-1
-
-</span>
-
-из
-
-5
-
-</div>
-
-<img
-
-id="csImage"
-
-class="quizImage"
-
-src="images/cs1.jpg"
-
->
-
-<h2 id="csQuestionTitle">
-
-Что изображено на картинке?
-
-</h2>
-
-<div class="answers">
-
-<button class="csAnswer" onclick="csAnswer(0)">
-
-Ответ 1
-
-</button>
-
-<button class="csAnswer" onclick="csAnswer(1)">
-
-Ответ 2
-
-</button>
-
-<button class="csAnswer" onclick="csAnswer(2)">
-
-Ответ 3
-
-</button>
-
-</div>
-
-<div id="csResult"></div>
-
-<button
-
-id="csNextButton"
-
-onclick="csNextQuestion()"
-
-style="display:none;">
-
-Следующий вопрос
-
-</button>
-
-</div>
-
-<div id="csFinish" style="display:none;">
-
-<h1>🏆 CS2 пройдена!</h1>
-
-<h2>
-
-Правильных ответов:
-
-<span id="csScore">0</span>
-
-/5
-
-</h2>
-
-<button onclick="csRestartGame()">
-
-Играть снова
-
-</button>
-
-</div>
-
-</section><main>
+<section class="card" id="news">
+<h2>📰 Новости</h2>
+<p>Здесь будут публиковаться новости проекта MAFRYATA.</p>
+</section>
 
 <section class="socials">
 
 <div class="card" id="telegram">
-
 <h2>Telegram</h2>
-
 <img src="images/telegram1.jpg" class="preview">
-
 <img src="images/telegram2.jpg" class="preview">
-
 <p>
-
-Ежедневные новости игр.
-
-Обновления.
-
-Интересные статьи.
-
-Гайды.
-
+Ежедневные новости игр.<br>
+Обновления.<br>
+Интересные статьи.<br>
+Гайды.<br>
 Розыгрыши.
-
 </p>
-
-<a
-href="https://t.me/mafryata"
-target="_blank"
-class="telegramButton">
-
-Перейти
-
-</a>
-
+<a href="https://t.me/mafryata" target="_blank" class="telegramButton">Перейти</a>
 </div>
 
 <div class="card" id="discord">
-
 <h2>Discord</h2>
-
 <img src="images/discord1.jpg" class="preview">
-
 <img src="images/discord2.jpg" class="preview">
-
 <img src="images/discord3.jpg" class="preview">
-
 <p>
-
-Общение.
-
-Голосовые комнаты.
-Игровые события.
-
+Общение.<br>
+Голосовые комнаты.<br>
+Игровые события.<br>
 Активное сообщество.
-
 </p>
-
-<a
-href="https://discord.gg/ve83XN7Wp"
-target="_blank"
-class="discordButton">
-
-Перейти
-
-</a>
-
+<a href="https://discord.gg/ve83XN7Wp" target="_blank" class="discordButton">Перейти</a>
 </div>
 
 </section>
@@ -456,16 +82,9 @@ class="discordButton">
 </main>
 
 <footer>
-
-<p>
-
-© 2026 MAFRYATA
-
-</p>
-
+<p>© 2026 MAFRYATA</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>

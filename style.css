@@ -1,705 +1,413 @@
-/*=========================================
-        MAFRYATA
-        by Mordirka
-=========================================*/
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-
-    background:#0b0b17;
-
-    color:white;
-
-    overflow-x:hidden;
-
+background:#0b1020;
+color:#fff;
+overflow-x:hidden;
 }
-
-/*==========================
-        ФОН
-==========================*/
 
 .background{
-
-    position:fixed;
-
-    width:100%;
-
-    height:100%;
-
-    left:0;
-
-    top:0;
-
-    z-index:-100;
-
-    background:
-
-    radial-gradient(circle at top left,#7b2cff33,transparent 40%),
-
-    radial-gradient(circle at bottom right,#4d7cff33,transparent 40%),
-
-    linear-gradient(135deg,#090912,#111124,#1b1738,#281d50);
-
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at top,#4f2d91 0%,transparent 35%),
+radial-gradient(circle at bottom,#123d78 0%,transparent 30%),
+#0b1020;
+z-index:-1;
 }
 
-/*==========================
-        МЕНЮ
-==========================*/
-
-nav{
-
-    width:100%;
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:20px 70px;
-
-    backdrop-filter:blur(15px);
-
-    background:rgba(15,15,25,.45);
-
-    border-bottom:1px solid rgba(255,255,255,.08);
-
-    z-index:999;
-
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(10,10,20,.75);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,.08);
+z-index:1000;
 }
 
 .logo{
-
-    font-size:38px;
-
-    font-weight:800;
-
-    color:#b95cff;
-
-    letter-spacing:2px;
-
-    text-shadow:0 0 20px #8b3dff;
-
+font-size:32px;
+font-weight:800;
+color:#b56cff;
+letter-spacing:2px;
+text-shadow:0 0 15px #8f5cff;
 }
 
-nav ul{
-
-    display:flex;
-
-    gap:35px;
-
-    list-style:none;
-
+nav{
+display:flex;
+gap:28px;
 }
 
 nav a{
-
-    text-decoration:none;
-
-    color:white;
-
-    transition:.3s;
-
+color:#fff;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
 }
 
 nav a:hover{
-
-    color:#b95cff;
-
+color:#b56cff;
 }
 
-/*==========================
-        HEADER
-==========================*/
+.menu-toggle{
+display:none;
+font-size:32px;
+cursor:pointer;
+}
 
-header{
-
-    min-height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    flex-direction:column;
-
-    text-align:center;
-
-    padding:120px 20px;
-
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:120px 20px 60px;
 }
 
 .hero h1{
-
-    font-size:95px;
-
-    color:#c56cff;
-
-    text-shadow:
-        0 0 15px #8b3dff,
-        0 0 35px #8b3dff,
-        0 0 70px #8b3dff,
-        0 0 120px #8b3dff;
-
-    margin-bottom:20px;
-
+font-size:72px;
+margin-bottom:20px;
+text-shadow:0 0 30px #8f5cff;
 }
 
 .hero p{
-
-    font-size:22px;
-
-    color:#dcdcdc;
-
-    line-height:1.8;
-
-    margin-bottom:35px;
-
+font-size:22px;
+opacity:.9;
+line-height:1.6;
+margin-bottom:45px;
 }
 
-.buttons{
-    margin-top:45px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:25px;
+.main-buttons{
+display:flex;
+flex-direction:column;
+gap:20px;
+align-items:center;
 }
 
-.telegramBtn,
-.discordBtn{
-
-    text-decoration:none;
-
-    color:white;
-
-    padding:17px 42px;
-
-    border-radius:15px;
-
-    font-weight:600;
-
-    transition:.35s;
-
+.top-buttons{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
 }
 
-.telegramBtn{
-
-    background:#8b3dff;
-
-    box-shadow:0 0 25px rgba(139,61,255,.55);
-
+.btn{
+display:flex;
+align-items:center;
+justify-content:center;
+width:220px;
+height:60px;
+border-radius:16px;
+text-decoration:none;
+font-weight:700;
+color:#fff;
+transition:.25s;
 }
 
-.telegramBtn:hover{
-
-    transform:translateY(-5px);
-
-    box-shadow:0 0 40px #8b3dff;
-
+.btn:hover{
+transform:translateY(-4px) scale(1.04);
 }
 
-.discordBtn{
-
-    background:#5865F2;
-
-    box-shadow:0 0 25px rgba(88,101,242,.55);
-
+.telegram{background:#229ED9;}
+.news{background:#ff8c00;}
+.discord{background:#5865F2;}
+.games{
+background:#1db954;
+width:320px;
 }
 
-.discordBtn:hover{
-
-    transform:translateY(-5px);
-
-    box-shadow:0 0 40px #5865F2;
-
-}
-
-/*==========================
-        КАРТОЧКИ
-==========================*/
-
-.socials{
-
-    width:90%;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:40px;
-
-    margin-bottom:100px;
-
+main{
+max-width:1200px;
+margin:auto;
+padding:40px 20px 80px;
 }
 
 .card{
-
-    background:rgba(255,255,255,.05);
-
-    backdrop-filter:blur(20px);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    border-radius:20px;
-
-    padding:30px;
-
-    transition:.4s;
-
-}
-
-.card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 0 35px rgba(155,70,255,.35);
-
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.08);
+border-radius:20px;
+padding:30px;
+margin:30px 0;
+backdrop-filter:blur(10px);
 }
 
 .card h2{
-
-    font-size:34px;
-
-    margin-bottom:20px;
-
-    color:#c680ff;
-
+margin-bottom:20px;
 }
-/*==========================
-      ИЗОБРАЖЕНИЯ
-==========================*/
 
 .preview{
-
-    width:100%;
-
-    border-radius:15px;
-
-    margin-top:15px;
-
-    margin-bottom:15px;
-
-    transition:.35s;
-
-    cursor:pointer;
-
-    border:2px solid rgba(255,255,255,.08);
-
-}
-
-.preview:hover{
-
-    transform:scale(1.03);
-
-    box-shadow:
-    0 0 30px rgba(155,70,255,.55);
-
-}
-
-/*==========================
-      ТЕКСТ
-==========================*/
-
-.card p{
-
-    margin-top:10px;
-
-    color:#d8d8d8;
-
-    line-height:1.8;
-
-    font-size:17px;
-
-}
-
-/*==========================
-      КНОПКИ В КАРТОЧКАХ
-==========================*/
-
-.telegramButton,
-.discordButton{
-
-    display:inline-block;
-
-    margin-top:25px;
-
-    padding:15px 40px;
-
-    border-radius:12px;
-
-    text-decoration:none;
-
-    color:white;
-
-    font-size:18px;
-
-    font-weight:600;
-
-    transition:.35s;
-
-}
-
-.telegramButton{
-
-    background:#8b3dff;
-
-    box-shadow:0 0 25px rgba(139,61,255,.45);
-
-}
-
-.telegramButton:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:0 0 40px #8b3dff;
-
-}
-
-.discordButton{
-
-    background:#5865F2;
-
-    box-shadow:0 0 25px rgba(88,101,242,.45);
-
-}
-
-.discordButton:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:0 0 40px #5865F2;
-
-}
-
-/*==========================
-        FOOTER
-==========================*/
-
-footer{
-
-    text-align:center;
-
-    padding:40px;
-
-    background:rgba(255,255,255,.04);
-
-    border-top:1px solid rgba(255,255,255,.08);
-
-}
-
-footer p{
-
-    color:#aaa;
-
-    font-size:16px;
-
-}
-
-/*==========================
-      СКРОЛЛБАР
-==========================*/
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:#0f0f1c;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:#8b3dff;
-
-    border-radius:20px;
-
-}
-
-::-webkit-scrollbar-thumb:hover{
-
-    background:#b56dff;
-
-}
-
-/*==========================
-      АДАПТАЦИЯ
-==========================*/
-
-@media(max-width:900px){
-
-nav{
-
-    padding:20px;
-
-}
-
-nav ul{
-
-    display:none;
-
-}
-
-.hero h1{
-
-    font-size:55px;
-
-}
-
-.hero p{
-
-    font-size:18px;
-
-}
-
-.buttons{
-
-    flex-direction:column;
-
-    align-items:center;
-
+width:100%;
+max-width:320px;
+border-radius:12px;
+margin:10px;
 }
 
 .socials{
-
-    grid-template-columns:1fr;
-
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
 }
 
-.card{
+.telegramButton,.discordButton{
+display:inline-block;
+margin-top:20px;
+padding:14px 30px;
+border-radius:12px;
+text-decoration:none;
+color:#fff;
+font-weight:700;
+}
 
+.telegramButton{background:#229ED9;}
+.discordButton{background:#5865F2;}
+
+footer{
+text-align:center;
+padding:30px;
+opacity:.7;
+}
+
+@media(max-width:900px){
+.menu-toggle{display:block;}
+nav{
+display:none;
+position:absolute;
+top:80px;
+right:20px;
+flex-direction:column;
+background:#151a2d;
+padding:20px;
+border-radius:15px;
+}
+nav.active{display:flex;}
+.hero h1{font-size:48px;}
+.hero p{font-size:18px;}
+.top-buttons{flex-direction:column;}
+.btn,.games{width:100%;max-width:320px;}
+}
+/* ========================= */
+/* Games Page */
+/* ========================= */
+
+.games-section{
+    max-width:1200px;
+    margin:140px auto 80px;
     padding:20px;
-
 }
 
-}
-/*==========================
-      АНИМАЦИЯ КАРТОЧЕК
-==========================*/
-
-.card{
-
-    opacity:0;
-
-    transform:translateY(60px);
-
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
 }
 
-.card.show{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-    transition:.8s;
-
+.section-title h2{
+    font-size:48px;
+    margin-bottom:10px;
 }
 
-.logo{
-
-    transition:.3s;
-
+.section-title p{
+    opacity:.8;
+    font-size:18px;
 }
+
+.games-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.game-card{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border-radius:22px;
+    overflow:hidden;
+    transition:.35s;
+    cursor:pointer;
+}
+
+.game-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 45px rgba(181,108,255,.35);
+}
+
+.game-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.game-content{
+    padding:25px;
+}
+
+.game-content h3{
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.game-content p{
+    opacity:.8;
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+.game-content button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,#8f5cff,#4d9dff);
+    color:white;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.game-content button:hover{
+    transform:scale(1.03);
+}
+
 /* ========================= */
-/*        МИНИ-ИГРЫ          */
-/* ========================= */
 
-.gtaGame,
-.minecraftGame,
-.cs2Game{
-
-    width:90%;
+.quiz-screen{
     max-width:900px;
-    margin:80px auto;
+    margin:140px auto 80px;
     padding:40px;
-
-    background:rgba(20,20,35,.85);
-
-    border:1px solid rgba(255,255,255,.1);
-
-    border-radius:25px;
-
-    box-shadow:0 0 40px rgba(140,70,255,.35);
-
-    backdrop-filter:blur(15px);
-
-}
-
-.gtaGame h1,
-.minecraftGame h1,
-.cs2Game h1{
-
-    text-align:center;
-    font-size:42px;
-    color:#b85cff;
-    margin-bottom:35px;
-
-}
-
-.progress{
-
-    text-align:center;
-    font-size:22px;
-    margin-bottom:25px;
-
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border-radius:24px;
+    animation:fade .4s;
 }
 
 .quizImage{
-
     width:100%;
-    max-width:700px;
+    border-radius:16px;
+    margin:25px 0;
+}
 
-    display:block;
-
-    margin:0 auto 30px;
-
+.progress-bar{
+    width:100%;
+    height:12px;
+    background:#222;
     border-radius:20px;
+    overflow:hidden;
+    margin:20px 0;
+}
 
-    border:3px solid #8b3dff;
-
+#progressFill{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#8f5cff,#4d9dff);
+    transition:.4s;
 }
 
 .answers{
-
-    display:flex;
-    flex-direction:column;
-
+    display:grid;
     gap:15px;
-
-    margin-top:30px;
-
+    margin-top:25px;
 }
 
 .answers button{
-
     padding:16px;
-
     border:none;
-
-    border-radius:12px;
-
-    background:#8b3dff;
-
+    border-radius:14px;
+    background:#20273d;
     color:white;
-
-    font-size:18px;
-
     cursor:pointer;
-
-    transition:.3s;
-
+    transition:.25s;
+    font-size:17px;
 }
 
 .answers button:hover{
-
-    background:#a85dff;
-
-    transform:scale(1.03);
-
+    background:#8f5cff;
 }
 
-#nextButton,
-#mcNextButton,
-#csNextButton{
-
-    display:block;
-
-    margin:30px auto 0;
-
-    padding:15px 35px;
-
+.backButton,
+#nextButton{
+    margin-top:25px;
+    padding:15px 30px;
     border:none;
-
-    border-radius:12px;
-
-    background:#00c853;
-
+    border-radius:14px;
+    background:#8f5cff;
     color:white;
-
-    font-size:18px;
-
+    font-size:16px;
     cursor:pointer;
+}
 
-    transition:.3s;
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(25px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
 
 }
 
-#nextButton:hover,
-#mcNextButton:hover,
-#csNextButton:hover{
+@media(max-width:768px){
 
-    transform:scale(1.05);
+.section-title h2{
+font-size:34px;
+}
+
+.quiz-screen{
+padding:25px;
+margin-top:120px;
+}
+
+}
+.finish-buttons{
+display:flex;
+gap:20px;
+justify-content:center;
+margin-top:30px;
+flex-wrap:wrap;
+}
+
+.finish-buttons button{
+
+padding:16px 30px;
+
+border:none;
+
+border-radius:14px;
+
+background:linear-gradient(135deg,#8f5cff,#4d9dff);
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
 
 }
 
-#finish,
-#mcFinish,
-#csFinish{
+.finish-buttons button:hover{
 
-    text-align:center;
+transform:translateY(-4px);
 
-    margin-top:40px;
-
-}
-
-#finish h1,
-#mcFinish h1,
-#csFinish h1{
-
-    color:#00ff88;
-
-    margin-bottom:20px;
-
-}
-
-#finish button,
-#mcFinish button,
-#csFinish button{
-
-    padding:15px 35px;
-
-    border:none;
-
-    border-radius:12px;
-
-    background:#8b3dff;
-
-    color:white;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-#finish button:hover,
-#mcFinish button:hover,
-#csFinish button:hover{
-
-    transform:scale(1.05);
+box-shadow:0 15px 30px rgba(143,92,255,.4);
 
 }
