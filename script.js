@@ -68,3 +68,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
 });
 
 console.log("MAFRYATA loaded successfully.");
+function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("active");
+}

@@ -411,3 +411,64 @@ transform:translateY(-4px);
 box-shadow:0 15px 30px rgba(143,92,255,.4);
 
 }
+/* ========================= */
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+/* ========================= */
+
+@media (max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+#navMenu{
+display:none;
+position:absolute;
+top:70px;
+right:15px;
+width:220px;
+background:#18142e;
+border:1px solid rgba(255,255,255,.08);
+border-radius:15px;
+padding:20px;
+flex-direction:column;
+gap:15px;
+box-shadow:0 0 25px rgba(143,92,255,.35);
+z-index:999;
+}
+
+#navMenu.active{
+display:flex;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.top-buttons{
+flex-direction:column;
+width:100%;
+}
+
+.main-buttons{
+width:100%;
+}
+
+.btn{
+width:260px;
+text-align:center;
+}
+
+header{
+padding:15px 20px;
+}
+
+.logo{
+font-size:32px;
+}
+
+}
