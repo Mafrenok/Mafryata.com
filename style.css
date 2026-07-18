@@ -135,26 +135,87 @@ margin:auto;
 padding:40px 20px 80px;
 }
 
+/* ========================= */
+/* КАРТОЧКИ */
+/* ========================= */
+
+.socials{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+    gap:35px;
+    margin-top:80px;
+}
+
 .card{
-background:rgba(255,255,255,.06);
-border:1px solid rgba(255,255,255,.08);
-border-radius:20px;
-padding:30px;
-margin:30px 0;
-backdrop-filter:blur(10px);
+    background:linear-gradient(145deg,#21193d,#151b31);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:25px;
+    padding:30px;
+    transition:.35s;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 35px rgba(143,92,255,.45);
 }
 
 .card h2{
-margin-bottom:20px;
+    font-size:34px;
+    margin-bottom:25px;
+    color:#fff;
+}
+
+.card p{
+    margin-top:20px;
+    line-height:1.8;
+    font-size:18px;
+    color:#d7d7d7;
 }
 
 .preview{
-width:100%;
-max-width:320px;
-border-radius:12px;
-margin:10px;
+    width:100%;
+    border-radius:18px;
+    margin-bottom:15px;
+    transition:.3s;
+    cursor:pointer;
 }
 
+.preview:hover{
+    transform:scale(1.03);
+}
+
+.telegramButton,
+.discordButton{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 34px;
+    border-radius:14px;
+    color:#fff;
+    font-weight:700;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.telegramButton{
+    background:#229ED9;
+}
+
+.telegramButton:hover{
+    background:#3fb5ee;
+    transform:translateY(-3px);
+    box-shadow:0 0 20px #229ED9;
+}
+
+.discordButton{
+    background:#8f5cff;
+}
+
+.discordButton:hover{
+    background:#a97dff;
+    transform:translateY(-3px);
+    box-shadow:0 0 20px #8f5cff;
+}
 .socials{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -182,7 +243,7 @@ opacity:.7;
 
 @media(max-width:900px){
 .menu-toggle{display:block;}
-nav{
+#navMenu{
 display:none;
 position:absolute;
 top:80px;
@@ -191,6 +252,11 @@ flex-direction:column;
 background:#151a2d;
 padding:20px;
 border-radius:15px;
+z-index:1000;
+}
+
+#navMenu.active{
+display:flex;
 }
 nav.active{display:flex;}
 .hero h1{font-size:48px;}
@@ -469,6 +535,25 @@ padding:15px 20px;
 
 .logo{
 font-size:32px;
+}
+
+}
+@media(max-width:768px){
+
+.socials{
+    grid-template-columns:1fr;
+}
+
+.card{
+    padding:20px;
+}
+
+.card h2{
+    font-size:28px;
+}
+
+.card p{
+    font-size:16px;
 }
 
 }
