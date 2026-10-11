@@ -1,19 +1,53 @@
-// ================================
+// ======================================
 // MAFRYATA
-// by Mordirka
-// ================================
+// Main Script
+// ======================================
 
-// Плавное появление карточек
+// ===============================
+// Mobile Menu
+// ===============================
 
-const cards = document.querySelectorAll(".card");
+function toggleMenu() {
 
-const observer = new IntersectionObserver((entries)=>{
+    const menu = document.getElementById("navMenu");
 
-    entries.forEach(entry=>{
+    menu.classList.toggle("active");
 
-        if(entry.isIntersecting){
+}
 
-            entry.target.classList.add("show");
+// Закрытие меню после выбора пункта
+
+document.querySelectorAll("#navMenu a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        document.getElementById("navMenu").classList.remove("active");
+
+    });
+
+});
+
+// ===============================
+// Smooth Scroll
+// ===============================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function(e){
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if(target){
+
+            e.preventDefault();
+
+            target.scrollIntoView({
+
+                behavior:"smooth",
+
+                block:"start"
+
+            });
 
         }
 
@@ -21,13 +55,47 @@ const observer = new IntersectionObserver((entries)=>{
 
 });
 
+// ===============================
+// Animation Cards
+// ===============================
+
+const cards = document.querySelectorAll(".card,.news-card");
+
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.style.opacity="1";
+
+            entry.target.style.transform="translateY(0)";
+
+        }
+
+    });
+
+},{
+
+    threshold:.15
+
+});
+
 cards.forEach(card=>{
+
+    card.style.opacity="0";
+
+    card.style.transform="translateY(40px)";
+
+    card.style.transition=".6s";
 
     observer.observe(card);
 
 });
 
-// Небольшой эффект логотипа
+// ===============================
+// Logo Effect
+// ===============================
 
 const logo = document.querySelector(".logo");
 
@@ -43,32 +111,4 @@ logo.addEventListener("mouseleave",()=>{
 
 });
 
-// Плавная прокрутка меню
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-
-    anchor.addEventListener("click",function(e){
-
-        const target=document.querySelector(this.getAttribute("href"));
-
-        if(target){
-
-            e.preventDefault();
-
-            target.scrollIntoView({
-
-                behavior:"smooth"
-
-            });
-
-        }
-
-    });
-
-});
-
-console.log("MAFRYATA loaded successfully.");
-function toggleMenu() {
-    const menu = document.getElementById("navMenu");
-    menu.classList.toggle("active");
-}
+console.log("MAFRYATA Loaded");

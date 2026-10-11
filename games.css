@@ -1,0 +1,795 @@
+/* =======================================
+   MAFRYATA
+   Games Page
+======================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:#0b1020;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+.background{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    background:
+    radial-gradient(circle at top,#6d3cff 0%,transparent 30%),
+    radial-gradient(circle at bottom,#0088ff 0%,transparent 25%),
+    #0b1020;
+}
+/* =======================================
+   Background
+======================================= */
+
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    background-image: url("./images/background11.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* =======================================
+   Header
+======================================= */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:rgba(10,15,30,.85);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    font-size:34px;
+
+    font-weight:800;
+
+    color:#b56cff;
+
+    text-shadow:0 0 20px #8f5cff;
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#8f5cff;
+
+}
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+}
+
+/* =======================================
+   Hero
+======================================= */
+
+.hero{
+
+    min-height:45vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:130px 20px 60px;
+
+}
+
+.hero h1{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+    text-shadow:0 0 30px #8f5cff;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    opacity:.9;
+
+    max-width:700px;
+
+    line-height:1.8;
+
+}
+/* =======================================
+   Games Grid
+======================================= */
+
+main{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:60px 25px 100px;
+
+}
+
+.games-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+    gap:35px;
+
+}
+
+.game-card{
+
+    background:linear-gradient(145deg,#1a1630,#10182c);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.game-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 35px rgba(143,92,255,.45);
+
+}
+
+.game-card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+    transition:.35s;
+
+}
+
+.game-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.game-content{
+
+    padding:30px;
+
+}
+
+.game-content h2{
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+}
+
+.game-content p{
+
+    line-height:1.8;
+
+    opacity:.85;
+
+    margin-bottom:25px;
+
+}
+
+.game-content button{
+
+    width:100%;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(135deg,#8f5cff,#4d9dff);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.game-content button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 25px rgba(143,92,255,.6);
+
+}
+
+/* =======================================
+   Quiz
+======================================= */
+
+.quiz-screen{
+
+    max-width:900px;
+
+    margin:60px auto;
+
+    padding:35px;
+
+    background:linear-gradient(145deg,#1a1630,#10182c);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.quiz-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.progress{
+
+    font-size:18px;
+
+    color:#b56cff;
+
+}
+
+.quizImage{
+
+    width:100%;
+
+    border-radius:18px;
+
+    margin:25px 0;
+
+}
+/* =======================================
+   Progress Bar
+======================================= */
+
+.progress-bar{
+
+    width:100%;
+
+    height:12px;
+
+    background:#20273d;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    margin:25px 0;
+
+}
+
+#progressFill{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(90deg,#8f5cff,#4d9dff);
+
+    transition:.4s;
+
+}
+
+/* =======================================
+   Answers
+======================================= */
+
+.answers{
+
+    display:grid;
+
+    gap:18px;
+
+    margin-top:30px;
+
+}
+
+.answers button{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#20273d;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.answers button:hover{
+
+    background:#8f5cff;
+
+    transform:translateY(-3px);
+
+}
+
+.answers button.correct{
+
+    background:#18b566;
+
+}
+
+.answers button.wrong{
+
+    background:#d63d3d;
+
+}
+
+/* =======================================
+   Quiz Buttons
+======================================= */
+
+.quiz-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    margin-top:35px;
+
+}
+
+.quiz-buttons button,
+.finish-buttons button{
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(135deg,#8f5cff,#4d9dff);
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.quiz-buttons button:hover,
+.finish-buttons button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 25px rgba(143,92,255,.45);
+
+}
+
+/* =======================================
+   Finish Screen
+======================================= */
+
+#finishScreen{
+
+    text-align:center;
+
+}
+
+#finishScreen h1{
+
+    font-size:52px;
+
+    margin-bottom:20px;
+
+}
+
+#finishScreen h2{
+
+    margin-bottom:20px;
+
+    opacity:.9;
+
+}
+
+#finishScreen h3{
+
+    color:#8f5cff;
+
+    font-size:30px;
+
+}
+
+.finish-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+
+}
+
+/* =======================================
+   Footer
+======================================= */
+
+footer{
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    opacity:.75;
+
+}
+
+/* =======================================
+   Mobile
+======================================= */
+
+@media(max-width:900px){
+
+.menu-toggle{
+
+display:block;
+
+}
+
+#navMenu{
+
+display:none;
+
+position:absolute;
+
+top:75px;
+
+right:20px;
+
+width:220px;
+
+padding:20px;
+
+background:#18142e;
+
+border-radius:16px;
+
+flex-direction:column;
+
+gap:18px;
+
+box-shadow:0 0 25px rgba(143,92,255,.35);
+
+}
+
+#navMenu.active{
+
+display:flex;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.games-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.quiz-screen{
+
+margin:40px 15px;
+
+padding:25px;
+
+}
+
+.quiz-header{
+
+flex-direction:column;
+
+gap:15px;
+
+text-align:center;
+
+}
+
+.quiz-buttons{
+
+flex-direction:column;
+
+}
+
+.quiz-buttons button,
+.finish-buttons button{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.logo{
+
+font-size:26px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.game-content h2{
+
+font-size:28px;
+
+}
+
+.answers button{
+
+font-size:16px;
+
+padding:15px;
+
+}
+
+}
+
+/* =======================================
+   Animation
+======================================= */
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.quiz-screen{
+
+animation:fade .35s;
+
+}
+.game-card,
+.gta-card,
+.minecraft-card,
+.cs2-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 24px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* Поднятие и неоновое свечение */
+.game-card:hover,
+.gta-card:hover,
+.minecraft-card:hover,
+.cs2-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(255, 255, 255, 0.55);
+
+    box-shadow:
+        0 12px 20px rgba(0, 0, 0, 0.2),
+        0 18px 35px rgba(143, 92, 255, 0.28),
+        0 8px 18px rgba(143, 92, 255, 0.22);
+}
+.quiz-screen {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 24px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* Свечение карточки теста при наведении */
+.quiz-screen:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.2),
+        0 15px 35px rgba(143, 92, 255, 0.22);
+}
+
+/* Стеклянные варианты ответов */
+.answers button {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 16px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Эффект при наведении на ответ */
+.answers button:hover {
+    background: rgba(143, 92, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.15),
+        0 8px 22px rgba(143, 92, 255, 0.25);
+}
+
+/* Сохраняем цвета правильного и неправильного ответов */
+.answers button.correct {
+    background: #18b566;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.answers button.wrong {
+    background: #d63d3d;
+    border-color: rgba(255, 255, 255, 0.3);
+}

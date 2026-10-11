@@ -1,89 +1,238 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MAFRYATA</title>
+
+<title>MAFRYATA | Игровое сообщество</title>
+
+<meta name="description" content="MAFRYATA — игровое сообщество. Новости, Telegram, Discord и мини-игры.">
+
 <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=CBRorkAJLxFFL7J1Tf15Ql2Mx8lSYx93Pn9D1SGKF6uNWvDkQr-g85UzoZC1-rI3Js2kb1QTcHI6lR6kdrDJt-TyxYs9rrAc-wYmHXOn2gS-1T_t78KU8LCJ6hHcPVfKy3N95Z-tFSHXxfpLLRoItWhCtj2LGVNVZQzGBG6crzPRxUztTJ3o0Sb93V1vmyqUxnywBzMQadXcoWU6homO1xF7GiazaE0f5yMpMBkksR5r-KkFessWnSeoEJhG4LrOx00wY1xAX1vkLkw3OTDvJ4jGpEDagfoYUGiK_gbleW0bclsGPvrJUdcx1artMX6o" charset="UTF-8"></script></head>
+
+</head>
+
 <body>
 
 <div class="background"></div>
 
 <header>
-  <div class="logo">MAFRYATA</div>
 
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  <nav id="navMenu">
-    <a href="#">Главная</a>
-    <a href="#telegram">Telegram</a>
-    <a href="#discord">Discord</a>
-    <a href="#news">Новости</a>
-    <a href="games.html">Игры</a>
-  </nav>
+<div class="logo">
+MAFRYATA
+</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+☰
+</div>
+
+<nav id="navMenu">
+
+<a href="#">Главная</a>
+
+<a href="#news">Новости</a>
+
+<a href="#telegram">Telegram</a>
+
+<a href="#discord">Discord</a>
+
+<a href="games.html">Игры</a>
+
+</nav>
+
 </header>
 
-<section class="hero" id="home">
+<section class="hero">
+
+<div class="hero-content">
+
 <h1>MAFRYATA</h1>
-<p>Лучшее игровое сообщество.<br>Telegram канал и Discord сервер.</p>
+
+<p>
+
+Лучшее игровое сообщество.<br>
+
+Новости, Telegram, Discord и мини-игры.
+
+</p>
 
 <div class="main-buttons">
-  <div class="top-buttons">
-    <a href="#telegram" class="btn telegram">🔵 Telegram</a>
-    <a href="#news" class="btn news">📰 Новости</a>
-    <a href="#discord" class="btn discord">🟣 Discord</a>
-  </div>
 
-  <a href="games.html" class="btn games">🎮 Мини-игры</a>
+<div class="top-buttons">
+
+<a href="#telegram" class="btn telegram">
+
+🔵 Telegram
+
+</a>
+
+<a href="#news" class="btn news">
+
+📰 Новости
+
+</a>
+
+<a href="#discord" class="btn discord">
+
+🟣 Discord
+
+</a>
+
 </div>
+
+<a href="games.html" class="btn games">
+
+🎮 Мини-игры
+
+</a>
+
+</div>
+
+</div>
+
 </section>
 
-<main>
+<section class="news-section" id="news">
 
-<section class="card" id="news">
-<h2>📰 Новости</h2>
-<p>Здесь будут публиковаться новости проекта MAFRYATA.</p>
+<h2>
+
+📰 Последние новости
+
+</h2>
+
+<div class="news-grid">
+
+<div class="news-card">
+
+<h3>MAFRYATA</h3>
+
+<p>
+
+Добро пожаловать на новый сайт сообщества!
+
+Теперь здесь будет намного больше контента, новостей и мини-игр.
+
+</p>
+
+</div>
+
+<div class="news-card">
+
+<h3>Мини-игры</h3>
+
+<p>
+
+На отдельной странице доступны викторины по GTA V, Minecraft и Counter-Strike 2.
+
+</p>
+
+</div>
+
+<div class="news-card">
+
+<h3>Discord</h3>
+
+<p>
+
+Совсем скоро появятся игровые события, турниры и новые роли.
+
+</p>
+
+</div>
+
+</div>
+
 </section>
-
 <section class="socials">
 
 <div class="card" id="telegram">
-<h2>Telegram</h2>
-<img src="images/telegram1.jpg" class="preview">
-<img src="images/telegram2.jpg" class="preview">
+
+<h2>🔵 Telegram</h2>
+
+<img
+src="images/telegram1.webp"
+class="preview"
+loading="lazy"
+decoding="async"
+alt="Telegram">
+
 <p>
-Ежедневные новости игр.<br>
-Обновления.<br>
-Интересные статьи.<br>
-Гайды.<br>
-Розыгрыши.
+
+Ежедневные новости игр, обновления, гайды, статьи и розыгрыши.
+
 </p>
-<a href="https://t.me/mafryata" target="_blank" class="telegramButton">Перейти</a>
+
+<a
+href="https://t.me/mafryata"
+target="_blank"
+class="telegramButton">
+
+Перейти в Telegram
+
+</a>
+
 </div>
 
 <div class="card" id="discord">
-<h2>Discord</h2>
-<img src="images/discord1.jpg" class="preview">
-<img src="images/discord2.jpg" class="preview">
-<img src="images/discord3.jpg" class="preview">
+
+<h2>🟣 Discord</h2>
+
+<img
+src="images/discord1.webp"
+class="preview"
+loading="lazy"
+decoding="async"
+alt="Discord">
+
 <p>
-Общение.<br>
-Голосовые комнаты.<br>
-Игровые события.<br>
-Активное сообщество.
+
+Общение, голосовые комнаты, игровые события и активное сообщество игроков.
+
 </p>
-<a href="https://discord.gg/ve83XN7Wp" target="_blank" class="discordButton">Перейти</a>
+
+<a
+href="https://discord.gg/WU2s5YCsh7"
+target="_blank"
+class="discordButton">
+
+Перейти в Discord
+
+</a>
+
 </div>
 
 </section>
 
-</main>
-
 <footer>
-<p>© 2026 MAFRYATA</p>
+
+<div class="footer-content">
+
+<h3>MAFRYATA</h3>
+
+<p>
+
+Игровое сообщество • Новости • Telegram • Discord • Мини-игры
+
+</p>
+
+<p>
+
+© 2026 MAFRYATA. Все права защищены.
+
+</p>
+
+</div>
+
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>

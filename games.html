@@ -9,7 +9,13 @@
 
 <title>MAFRYATA | Мини-игры</title>
 
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="Мини-игры MAFRYATA. Проверь свои знания по GTA V, Minecraft и Counter-Strike 2.">
+
+<link rel="stylesheet" href="games.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -41,6 +47,12 @@ MAFRYATA
 
 </a>
 
+<a href="index.html#news">
+
+Новости
+
+</a>
+
 <a href="index.html#telegram">
 
 Telegram
@@ -53,12 +65,6 @@ Discord
 
 </a>
 
-<a href="index.html#news">
-
-Новости
-
-</a>
-
 <a href="games.html">
 
 Игры
@@ -68,118 +74,315 @@ Discord
 </nav>
 
 </header>
+
+<section class="hero">
+
+<h1>
+
+🎮 Мини-игры
+
+</h1>
+
+<p>
+
+Проверь свои знания в любимых играх.
+
+Выбери викторину и набери максимальный результат.
+
+</p>
+
+</section>
+
 <main>
 
-<section class="games-section">
+<div class="games-grid">
 
-    <div class="section-title">
-        <h1>🎮 Выберите игру</h1>
-        <p>Проверьте свои знания и установите новый рекорд.</p>
-    </div>
+<div class="game-card">
 
-    <div class="games-grid">
+<img
 
-        <div class="game-card" onclick="startGame('gta')">
+src="images/gta-cover.webp"
 
-            <img src="images/gta-cover.jpg" alt="GTA V">
+loading="lazy"
 
-            <div class="game-content">
+decoding="async"
 
-                <h3>🚗 GTA V</h3>
+alt="GTA V"
 
-                <p>5 вопросов по GTA Online.</p>
+>
 
-                <button>Играть</button>
+<div class="game-content">
 
-            </div>
+<h2>
 
-        </div>
+🚗 GTA V
 
-        <div class="game-card" onclick="startGame('minecraft')">
+</h2>
 
-            <img src="images/minecraft-cover.jpg" alt="Minecraft">
+<p>
 
-            <div class="game-content">
+Узнай, насколько хорошо ты знаешь автомобили,
 
-                <h3>⛏ Minecraft</h3>
+транспорт и мир GTA Online.
 
-                <p>Угадай блоки, мобов и предметы.</p>
+</p>
 
-                <button>Играть</button>
+<button onclick="openQuiz('gta')">
 
-            </div>
+Играть
 
-        </div>
+</button>
 
-        <div class="game-card" onclick="startGame('cs2')">
+</div>
 
-            <img src="images/cs2-cover.jpg" alt="CS2">
+</div>
 
-            <div class="game-content">
+<div class="game-card">
 
-                <h3>🔫 Counter-Strike 2</h3>
+<img
 
-                <p>Карты, оружие и игровые предметы.</p>
+src="images/minecraft-cover.webp"
 
-                <button>Играть</button>
+loading="lazy"
 
-            </div>
+decoding="async"
 
-        </div>
+alt="Minecraft"
 
-    </div>
+>
 
-</section>
+<div class="game-content">
 
-<section id="quizScreen" class="quiz-screen" style="display:none">
+<h2>
 
-    <button class="backButton" onclick="backToMenu()">
-        ← Назад
-    </button>
+⛏ Minecraft
 
-    <h2 id="gameTitle"></h2>
+</h2>
 
-    <div class="progress-bar">
-        <div id="progressFill"></div>
-    </div>
+<p>
 
-    <p id="questionCounter"></p>
+Проверь знания мобов,
 
-    <img id="quizImage" class="quizImage">
+биомов,
 
-    <h3 id="questionText"></h3>
+предметов и блоков.
 
-    <div id="answers" class="answers"></div>
+</p>
 
-    <button id="nextButton" style="display:none">
-        Следующий вопрос
-    </button>
+<button onclick="openQuiz('minecraft')">
 
-</section>
+Играть
 
-<section id="finishScreen" class="quiz-screen" style="display:none">
+</button>
 
-    <h1>🏆 Поздравляем!</h1>
+</div>
 
-    <h2 id="finalScore"></h2>
+</div>
 
-    <p>Спасибо за прохождение викторины.</p>
+<div class="game-card">
 
-    <div class="finish-buttons">
+<img
 
-        <button onclick="restartGame()">
-            🔄 Играть снова
-        </button>
+src="images/cs2-cover.webp"
 
-        <button onclick="backToMenu()">
-            🎮 Выбор игр
-        </button>
+loading="lazy"
 
-    </div>
+decoding="async"
 
-</section>
+alt="Counter Strike 2"
+
+>
+
+<div class="game-content">
+
+<h2>
+
+🔫 Counter-Strike 2
+
+</h2>
+
+<p>
+
+Карты,
+
+оружие,
+
+скины и многое другое.
+
+</p>
+
+<button onclick="openQuiz('cs2')">
+
+Играть
+
+</button>
+
+</div>
+
+</div>
+
+</div>
 
 </main>
+<!-- ====================================== -->
+<!-- Quiz Screen -->
+<!-- ====================================== -->
+
+<section id="quizScreen" class="quiz-screen" style="display:none;">
+
+<div class="quiz-header">
+
+<h2 id="quizTitle">
+
+Игра
+
+</h2>
+
+<div class="progress">
+
+Вопрос
+
+<span id="questionNumber">
+
+1
+
+</span>
+
+из
+
+<span id="totalQuestions">
+
+5
+
+</span>
+
+</div>
+
+</div>
+
+<div class="progress-bar">
+
+<div id="progressFill"></div>
+
+</div>
+
+<img
+
+id="quizImage"
+
+class="quizImage"
+
+src=""
+
+alt="Quiz"
+
+loading="lazy"
+
+decoding="async"
+
+>
+
+<h2 id="questionTitle">
+
+Вопрос
+
+</h2>
+
+<div class="answers" id="answers">
+
+</div>
+
+<div id="result"></div>
+
+<div class="quiz-buttons">
+
+<button
+
+id="nextButton"
+
+onclick="nextQuestion()"
+
+style="display:none;">
+
+Следующий вопрос
+
+</button>
+
+<button
+
+class="backButton"
+
+onclick="backToGames()">
+
+← Назад
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ====================================== -->
+<!-- Finish -->
+<!-- ====================================== -->
+
+<section
+
+id="finishScreen"
+
+class="quiz-screen"
+
+style="display:none;">
+
+<h1>
+
+🏆 Поздравляем!
+
+</h1>
+
+<h2>
+
+Вы прошли викторину.
+
+</h2>
+
+<h3>
+
+Правильных ответов:
+
+<span id="score">
+
+0
+
+</span>
+
+/
+
+<span id="finishTotal">
+
+5
+
+</span>
+
+</h3>
+
+<div class="finish-buttons">
+
+<button onclick="restartQuiz()">
+
+Играть снова
+
+</button>
+
+<button onclick="backToGames()">
+
+Все игры
+
+</button>
+
+</div>
+
+</section>
 
 <footer>
 
@@ -195,4 +398,5 @@ Discord
 <script src="games.js"></script>
 
 </body>
+
 </html>
